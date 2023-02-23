@@ -191,7 +191,7 @@ const Home = (props: HomeProps) => {
   const openOnSolscan = useCallback((mint) => {
     window.open(
       `https://solscan.io/address/${mint}${
-        [WalletAdapterNetwork.Devnet, WalletAdapterNetwork.Testnet].includes(
+        [WalletAdapterNetwork.Mainnet, WalletAdapterNetwork.Testnet].includes(
           network
         )
           ? `?cluster=${network}`
@@ -376,7 +376,7 @@ const Home = (props: HomeProps) => {
                         gatekeeperNetwork={guards.gatekeeperNetwork}
                         connection={connection}
                         cluster={
-                          process.env.NEXT_PUBLIC_SOLANA_NETWORK || "devnet"
+                          process.env.NEXT_PUBLIC_SOLANA_NETWORK || "mainnet"
                         }
                         options={{ autoShowModal: false }}
                       >
