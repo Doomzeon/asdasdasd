@@ -115,7 +115,7 @@ export default function useCandyMachineV3(
       );
     const verifyProof = (
       merkleRoot: Uint8Array | string,
-      label = "WL"
+      label = "PUBLIC"
     ) => {
       let merkle = merkles[label];
       if (!merkle) return;
